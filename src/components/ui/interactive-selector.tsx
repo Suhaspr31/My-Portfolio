@@ -43,86 +43,87 @@ const InteractiveSelector = () => {
   ];
 
   return (
-    <div ref={containerRef} className="relative flex flex-col items-center justify-center py-10 bg-transparent font-display text-white overflow-hidden">
-
-      {/* Options Container */}
-      <div className="flex flex-col md:flex-row w-full max-w-[1100px] h-[600px] md:h-[500px] gap-3 md:gap-2 items-stretch overflow-hidden relative px-4">
+    <div ref={containerRef} className="relative flex flex-col items-center justify-center py-10 bg-transparent font-display text-white overflow-hidden"> 
+      
+      {/* Options Container - Responsive Accordion */}
+      <div className="flex flex-col md:flex-row w-full max-w-[1150px] min-h-[500px] md:h-[550px] gap-3 items-stretch relative px-4">
         {options.map((option, index) => (
           <motion.div
             key={index}
             layout
             initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? {
-              opacity: 1,
-              x: 0,
-              flex: activeIndex === index ? 10 : 1
+            animate={isInView ? { 
+                opacity: 1, 
+                x: 0,
+                flex: activeIndex === index ? 8 : 1,
+                minWidth: '70px',
+                minHeight: activeIndex === index ? '350px' : '70px'
             } : {}}
-            transition={{
-              duration: 0.8,
-              ease: EASE,
-              delay: index * 0.1,
-              flex: { duration: 0.6, ease: EASE }
+            transition={{ 
+                duration: 0.8, 
+                ease: EASE,
+                delay: index * 0.08,
+                flex: { duration: 0.7, ease: EASE }
             }}
             className={`
-              relative flex flex-col justify-end overflow-hidden cursor-pointer rounded-[24px] group border border-white/5 min-h-[60px] md:min-h-0
+              relative flex flex-col justify-end overflow-hidden cursor-pointer rounded-[32px] group border border-white/10 shadow-2xl transition-all duration-500
             `}
             onClick={() => setActiveIndex(index)}
           >
-            {/* Background Container */}
+            {/* Background Image Layer */}
             <motion.div
               layout
-              className="absolute inset-0 transition-all duration-700 ease-in-out"
+              className="absolute inset-0 z-0 transition-all duration-700 ease-in-out"
               style={{
                 backgroundImage: `url('${option.image}')`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                filter: activeIndex === index ? 'brightness(0.7) contrast(1.5)' : 'brightness(0.5) grayscale(0.2) contrast(1)',
+                filter: activeIndex === index ? 'brightness(0.7) contrast(1.4)' : 'brightness(0.4) grayscale(0.5)',
               }}
             />
 
-            {/* Content Overlay - Optimized Mobile Positioning */}
-            <div className={`relative z-20 w-full h-full flex flex-col ${activeIndex === index ? 'justify-end p-6 md:p-10' : 'justify-start md:justify-center p-3 md:p-6'} transition-all duration-500`}>
-              <div className={`flex items-center ${activeIndex === index ? 'gap-4' : 'justify-start md:items-center md:gap-4'} w-full`}>
-                <motion.div
-                  layout
-                  className={`flex items-center justify-center shrink-0 shadow-lg group-hover:bg-white/25 transition-colors ${
-                    activeIndex === index 
-                      ? 'w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-white/15 backdrop-blur-xl border border-white/20' 
-                      : 'w-7 h-7 md:w-12 md:h-12 rounded-lg md:rounded-2xl bg-white/20 md:bg-white/15 backdrop-blur-lg border border-white/10'
-                  }`}
-                >
-                  {option.icon}
-                </motion.div>
-
-                <AnimatePresence mode="wait">
-                  {activeIndex === index && (
-                    <motion.div
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: 10 }}
-                      transition={{ duration: 0.4, ease: EASE }}
-                      className="ml-4 overflow-hidden"
-                    >
-                      <h3 className="font-bold text-lg md:text-2xl leading-tight whitespace-nowrap">
-                        {option.title}
-                      </h3>
-                      <p className="text-white/70 text-xs md:text-base line-clamp-1">
-                        {option.description}
-                      </p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            </div>
-
-            {/* Active Highlight */}
+            {/* Selection Indicator */}
             {activeIndex === index && (
-              <motion.div
-                layoutId="active-glow"
-                className="absolute inset-x-0 bottom-0 h-1 bg-accent z-30"
-                transition={{ duration: 0.6, ease: EASE }}
-              />
+                <motion.div 
+                    layoutId="active-indicator"
+                    className="absolute inset-x-0 bottom-0 h-1.5 bg-accent z-40"
+                    transition={{ duration: 0.7, ease: EASE }}
+                />
             )}
+
+            {/* Content Container - Stable Vertical Alignment */}
+            <div className={`relative z-20 w-full h-full flex flex-col transition-all duration-500 ease-in-out pointer-events-none pb-8 
+                ${activeIndex === index ? 'justify-end items-start px-6 md:px-10' : 'justify-center items-center px-0'}`}>
+                
+                <div className="flex items-center gap-6">
+                    {/* The Icon stays centered in the narrow card, and left-aligned in the wide card */}
+                    <motion.div 
+                        layout
+                        className="w-12 h-12 md:w-14 md:h-14 rounded-[20px] bg-black/60 backdrop-blur-2xl border border-white/20 flex items-center justify-center shrink-0 shadow-2xl group-hover:bg-black/80 transition-colors"
+                    >
+                        {option.icon}
+                    </motion.div>
+                    
+                    <AnimatePresence mode="wait">
+                        {activeIndex === index && (
+                            <motion.div
+                                initial={{ opacity: 0, x: 20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: 10 }}
+                                transition={{ duration: 0.5, ease: EASE }}
+                                className="overflow-hidden"
+                            >
+                                <h3 className="font-bold text-2xl md:text-4xl leading-tight whitespace-nowrap tracking-tight">
+                                    {option.title}
+                                </h3>
+                                <p className="text-white/80 text-base md:text-xl font-medium line-clamp-1 mt-1">
+                                    {option.description}
+                                </p>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+                </div>
+            </div>
           </motion.div>
         ))}
       </div>
