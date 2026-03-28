@@ -2,7 +2,7 @@
 
 A high-performance, cinematic, and fully interactive personal portfolio designed to showcase software engineering excellence with a focus on AI/ML and Full-Stack Development.
 
-[![Portfolio Preview](https://raw.githubusercontent.com/Suhaspr31/portavia-react/main/public/img/preview.png)](https://my-portfolio-wheat-seven-82.vercel.app/)
+[![Portfolio Preview](https://raw.githubusercontent.com/Suhaspr31/My-Portfolio/main/public/img/preview.png)](https://my-portfolio-wheat-seven-82.vercel.app/)
 
 [![Live Demo](https://img.shields.io/badge/Live%20Portfolio-Visit-blue?style=for-the-badge&logo=vercel)](https://my-portfolio-wheat-seven-82.vercel.app/)
 
