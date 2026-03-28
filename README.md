@@ -2,9 +2,10 @@
 
 A high-performance, cinematic, and fully interactive personal portfolio designed to showcase software engineering excellence with a focus on AI/ML and Full-Stack Development.
 
+[![Portfolio Preview](https://raw.githubusercontent.com/Suhaspr31/portavia-react/main/public/img/preview.png)](https://my-portfolio-wheat-seven-82.vercel.app/)
+
 [![Live Demo](https://img.shields.io/badge/Live%20Portfolio-Visit-blue?style=for-the-badge&logo=vercel)](https://my-portfolio-wheat-seven-82.vercel.app/)
 
-[![Portfolio Preview](https://github.com/Suhaspr31/raw/main/public/img/preview.png)](https://my-portfolio-wheat-seven-82.vercel.app/)
 
 ## 🚀 Experience the Motion
 This portfolio is built with a **"Cinematic Minimalism"** philosophy, focusing on fluid, hardware-accelerated transitions and immersive user interaction.
