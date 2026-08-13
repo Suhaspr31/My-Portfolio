@@ -35,7 +35,7 @@ const cardItems = [
     stack: [
       "Java", "Spring Boot", "React.js", "MySQL", "Spring Security", "REST APIs"
     ],
-    githubUrl: "https://github.com/Suhaspr31",
+    githubUrl: "https://github.com/Suhaspr31/Civic-Issue-Management-System.git",
     liveUrl: "",
     color: "#0f172a",
     textColor: "white",
@@ -56,7 +56,7 @@ const cardItems = [
     stack: [
       "Java", "Spring Boot", "Spring Security", "Hibernate", "MySQL", "REST APIs"
     ],
-    githubUrl: "https://github.com/Suhaspr31",
+    githubUrl: " https://github.com/Suhaspr31/E-commerce-Web-Application",
     liveUrl: "",
     color: "#1e1b4b",
     textColor: "white",

@@ -55,7 +55,7 @@ export default function Projects() {
             stack: [
                 "Java", "Spring Boot", "React.js", "MySQL", "Spring Security", "REST APIs"
             ],
-            githubUrl: "https://github.com/Suhaspr31",
+            githubUrl: "https://github.com/Suhaspr31/Civic-Issue-Management-System.git",
             liveUrl: ""
         },
         {
@@ -71,7 +71,7 @@ export default function Projects() {
             stack: [
                 "Java", "Spring Boot", "Spring Security", "Hibernate", "MySQL", "REST APIs"
             ],
-            githubUrl: "https://github.com/Suhaspr31",
+            githubUrl: " https://github.com/Suhaspr31/E-commerce-Web-Application",
             liveUrl: ""
         },
         {
@@ -198,7 +198,7 @@ export default function Projects() {
         <div className="bg-background text-text-main">
             <Navbar />
 
-            <motion.main 
+            <motion.main
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
@@ -220,7 +220,7 @@ export default function Projects() {
                     />
 
                     <div className="overflow-hidden">
-                        <motion.h1 
+                        <motion.h1
                             initial={{ y: "100%" }}
                             animate={{ y: 0 }}
                             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
@@ -230,7 +230,7 @@ export default function Projects() {
                         </motion.h1>
                     </div>
 
-                    <motion.p 
+                    <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
@@ -239,7 +239,7 @@ export default function Projects() {
                         Explore my complete portfolio of work, from intelligent backend systems to cinematic frontend experiences.
                     </motion.p>
 
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1.2, duration: 1 }}
