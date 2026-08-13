@@ -14,6 +14,37 @@ interface WhisperTextProps {
   triggerStart?: string;
 }
 
+interface WordToken {
+  word: string;
+  isBold: boolean;
+  isNewline: boolean;
+}
+
+const parseTextToTokens = (rawText: string): WordToken[] => {
+  const tokens: WordToken[] = [];
+  const parts = rawText.split(/(\*\*[^*]+\*\*)/g);
+
+  parts.forEach((part) => {
+    if (!part) return;
+    const isBold = part.startsWith("**") && part.endsWith("**");
+    const content = isBold ? part.slice(2, -2) : part;
+
+    const lines = content.split("\n");
+    lines.forEach((line, lineIdx) => {
+      if (lineIdx > 0) {
+        tokens.push({ word: "", isBold: false, isNewline: true });
+      }
+
+      const words = line.split(/\s+/).filter(Boolean);
+      words.forEach((w) => {
+        tokens.push({ word: w, isBold, isNewline: false });
+      });
+    });
+  });
+
+  return tokens;
+};
+
 const WhisperText: React.FC<WhisperTextProps> = ({
   text,
   className = "",
@@ -49,17 +80,7 @@ const WhisperText: React.FC<WhisperTextProps> = ({
     return () => ctx.revert();
   }, [text, delay, duration, x, y, triggerStart]);
 
-  const renderWords = () =>
-    text.split(" ").map((word, i) => (
-      <span
-        key={i}
-        data-word
-        className="inline-block whitespace-nowrap"
-        style={{ position: "relative" }}
-      >
-        {word}
-      </span>
-    ));
+  const tokens = parseTextToTokens(text);
 
   return (
     <div
@@ -67,7 +88,23 @@ const WhisperText: React.FC<WhisperTextProps> = ({
       className={`relative inline-flex flex-wrap gap-x-2 md:gap-x-3 gap-y-1 ${className}`}
       style={{ overflow: "visible" }}
     >
-      {renderWords()}
+      {tokens.map((token, i) => {
+        if (token.isNewline) {
+          return <span key={i} className="w-full h-3 block basis-full" />;
+        }
+        return (
+          <span
+            key={i}
+            data-word
+            className={`inline-block whitespace-nowrap ${
+              token.isBold ? "font-bold text-[#5b68df]" : ""
+            }`}
+            style={{ position: "relative" }}
+          >
+            {token.word}
+          </span>
+        );
+      })}
     </div>
   );
 };

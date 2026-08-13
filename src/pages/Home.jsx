@@ -365,9 +365,9 @@ export default function PortaviaReplica() {
               <SpringReveal>
                 <div className="font-display text-[32px] lg:text-[40px] text-text-muted mb-6 tracking-tight">MY STORY —</div>
                 <WhisperText
-                  text="I blend robust logical problem solving with highly scalable web architecture to engineer the next generation of applications. Specialized in Python, Node.js, and complex AI integrations."
-                  className="font-body text-[22px] lg:text-[34px] font-normal leading-[1.3] text-text-main w-full justify-center lg:justify-start max-w-[800px] mx-auto lg:mx-0"
-                  delay={50}
+                  text="I’m a **Java Full-Stack Developer** who enjoys turning real-world problems into scalable web applications. I specialize in **Java, Spring Boot, React, MySQL, and REST APIs**, while exploring **AI and Generative AI** to build smarter, next-generation applications."
+                  className="font-body text-[22px] lg:text-[32px] font-normal leading-[1.4] text-text-main w-full justify-center lg:justify-start max-w-[800px] mx-auto lg:mx-0"
+                  delay={40}
                   y={20}
                   duration={0.8}
                   triggerStart="top 85%"
@@ -461,7 +461,7 @@ export default function PortaviaReplica() {
                   <div className="relative z-10">
                     <p className="font-body text-[15px] opacity-70 mb-10">University Academic Standing</p>
                     <div className="flex items-baseline gap-1 mb-2">
-                      <span className="font-display text-[80px] font-black leading-none group-hover:scale-105 transition-transform duration-500 inline-block">7.95</span>
+                      <span className="font-display text-[80px] font-black leading-none group-hover:scale-105 transition-transform duration-500 inline-block">8.12</span>
                       <span className="font-display text-[40px] font-bold opacity-50">/10</span>
                     </div>
                     <p className="font-display text-[22px] font-bold uppercase tracking-tight">Current CGPA</p>
