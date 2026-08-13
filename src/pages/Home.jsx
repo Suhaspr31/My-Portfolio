@@ -737,7 +737,7 @@ export default function PortaviaReplica() {
                     </div>
                     <div>
                       <h3 className="font-display text-[20px] font-bold mb-2">Phone</h3>
-                      <p className="text-muted">+91 98765 43210</p>
+                      <p className="text-muted">+91 7022949724</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
