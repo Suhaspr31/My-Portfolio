@@ -8,7 +8,7 @@ import ScrollExpandMedia from '@/components/ui/scroll-expansion-hero';
 import { CardsParallax } from '@/components/ui/scroll-cards';
 import StickyFooter from '@/components/ui/footer';
 import { Macbook } from '@/components/ui/animated-3d-mac-book-air';
-import { GraduationCap, School, BookOpen, Award, CheckCircle2 } from 'lucide-react';
+import { GraduationCap, School, BookOpen, Award, CheckCircle2, Briefcase } from 'lucide-react';
 import ButtonWithIconDemo from '@/components/ui/button-witn-icon';
 import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button';
 import Navbar from '@/components/ui/navbar';
@@ -20,6 +20,48 @@ void motion;
 
 // Featured Projects Data
 const cardItems = [
+  {
+    title: "Smart Civic Issue Reporting System",
+    description: "Java, Spring Boot, React.js, MySQL Jul’26",
+    tag: "civic tech",
+    src: "/img/Smart Civic.png",
+    tags: ['Java', 'Spring Boot', 'React.js', 'MySQL'],
+    overview: "Smart Civic Issue Reporting System\n\nBuilt a civic issue reporting platform supporting image uploads, real-time tracking, role-based access, notifications, and SLA-based escalation.",
+    details: "Designed RESTful APIs, Spring Security-based role authentication, feedback management, and SLA-based escalation for efficient issue resolution.",
+    performance: "Real-time Tracking & Escalation",
+    performanceDetail: "SLA-based automated issue escalation workflows.",
+    responsive: "React.js Web Platform",
+    responsiveDetail: "Role-based access for citizens and admin officers.",
+    stack: [
+      "Java", "Spring Boot", "React.js", "MySQL", "Spring Security", "REST APIs"
+    ],
+    githubUrl: "https://github.com/Suhaspr31",
+    liveUrl: "",
+    color: "#0f172a",
+    textColor: "white",
+    link: "#",
+  },
+  {
+    title: "E-Commerce Web Application",
+    description: "Java, Spring Boot, Spring Security, Hibernate, MySQL Dec’24",
+    tag: "e-commerce",
+    src: "/img/Ecommerce.png",
+    tags: ['Java', 'Spring Boot', 'Spring Security', 'MySQL'],
+    overview: "E-Commerce Web Application\n\nDeveloped a secure full-stack E-Commerce application supporting Admin and Customer modules with 15+ REST APIs, Spring Security authentication, and CRUD operations.",
+    details: "Implemented Spring Security, RESTful APIs, CRUD operations, shopping cart, checkout, and order management for Admin and Customer modules.",
+    performance: "15+ RESTful APIs & Spring Security",
+    performanceDetail: "Spring Security authentication with Hibernate ORM.",
+    responsive: "Full-Stack Web App",
+    responsiveDetail: "Admin & Customer operational modules.",
+    stack: [
+      "Java", "Spring Boot", "Spring Security", "Hibernate", "MySQL", "REST APIs"
+    ],
+    githubUrl: "https://github.com/Suhaspr31",
+    liveUrl: "",
+    color: "#1e1b4b",
+    textColor: "white",
+    link: "#",
+  },
   {
     title: "AgroUnify",
     description: "Smart Farming and Agricultural Platform | Python, React, MongoDB Jan’25",
@@ -33,10 +75,10 @@ const cardItems = [
     responsive: "Progressive Web App (PWA)",
     responsiveDetail: "Offline support with service workers and push notifications.",
     stack: [
-        "React (Vite)", "TypeScript / JavaScript", "Tailwind CSS",
-        "Node.js / Express", "MongoDB", "Elasticsearch",
-        "Python (Flask / FastAPI)", "YOLOv8 / EfficientNet", "Google Gemini API",
-        "TensorFlow / PyTorch"
+      "React (Vite)", "TypeScript / JavaScript", "Tailwind CSS",
+      "Node.js / Express", "MongoDB", "Elasticsearch",
+      "Python (Flask / FastAPI)", "YOLOv8 / EfficientNet", "Google Gemini API",
+      "TensorFlow / PyTorch"
     ],
     githubUrl: "https://github.com/Suhaspr31/AgroUnify-Smart-Farming-and-Agricultural-Platform-.git",
     liveUrl: "",
@@ -57,56 +99,11 @@ const cardItems = [
     responsive: "Web-based Interaction",
     responsiveDetail: "Desktop-optimized usage with seamless webcam integration.",
     stack: [
-        "Python", "Flask", "OpenCV", "scikit-learn (KNN)", "NumPy", "SQLite", "ReportLab"
+      "Python", "Flask", "OpenCV", "scikit-learn (KNN)", "NumPy", "SQLite", "ReportLab"
     ],
     githubUrl: "https://github.com/Suhaspr31/Face-Recognition-Attendance-System.git",
     liveUrl: "http://localhost:5000/",
     color: "purple",
-    textColor: "white",
-    link: "#",
-  },
-  {
-    title: "Movie Recommendation System",
-    description: "Python, Pandas, scikit-learn, Streamlit Oct'25",
-    tag: "recommendation",
-    src: "/img/Movie Recommendation.png",
-    tags: ['Full Stack', 'AI', 'ML Engine'],
-    overview: "AI-Powered Personalized Movie Recommendation Platform\n\nThis project is a full-stack movie recommendation system designed to deliver highly personalized suggestions using collaborative filtering techniques. It leverages ALS (Alternating Squares) factorization to analyze user preferences and generate accurate recommendations based on rating history.",
-    details: "The system dynamically builds a virtual user profile by analyzing movies rated highly by the user (≥ 3.5 stars) and computing a feature vector in latent factor space. This enables real-time personalization, where recommendations continuously evolve as users interact with the platform.\n\nBuilt with a scalable microservices architecture, the platform integrates a React-based frontend, a Node.js backend API, and a Python-based ML engine. It ensures efficient data processing, secure authentication, and seamless movie discovery.",
-    performance: "High-performance ALS model",
-    performanceDetail: "Real-time personalization with dynamic user vector computation.",
-    responsive: "Modern Search UI",
-    responsiveDetail: "Interactive dashboards and responsive movie discovery grid.",
-    stack: [
-        "React", "React Router", "Node.js / Express", "MongoDB Atlas",
-        "Mongoose", "JWT", "Python (Flask)", "Pandas", "NumPy",
-        "Scikit-learn", "Apache Spark (ALS)"
-    ],
-    githubUrl: "https://github.com/Suhaspr31/Movie-Recommendation-System.git",
-    liveUrl: "",
-    color: "red",
-    textColor: "white",
-    link: "#",
-  },
-  {
-    title: "Sentiment Watchdog",
-    description: "AI-Powered Review Analyzer | Python, NLP, scikit-learn Jul’24",
-    tag: "NLP",
-    src: "/img/Sentiment Analysis.png",
-    tags: ['AI', 'Dashboard', 'NLP'],
-    overview: "AI-Powered Sentiment Monitoring Dashboard\n\nThis project is an AI-powered sentiment analysis dashboard designed to monitor and visualize real-time customer emotions from textual data. It enables support teams to input customer messages and instantly receive emotion predictions such as joy, anger, sadness, and more.",
-    details: "The system integrates a FastAPI backend with a Streamlit-based frontend to deliver a seamless analytics experience. It processes incoming data using a pre-trained NLP model and stores results in a structured database for further insights.\n\nThe dashboard provides rich visualizations including emotion distribution charts, word clouds, and time-based heatmaps, allowing users to analyze sentiment trends and patterns effectively.",
-    performance: "Real-time NLP Classification",
-    performanceDetail: "Low-latency API responses for large message streams.",
-    responsive: "Interactive Dashboard",
-    responsiveDetail: "Built with Streamlit for quick and intuitive desktop analytics.",
-    stack: [
-        "Python", "Streamlit", "FastAPI", "SQLite (SQLAlchemy)",
-        "HuggingFace Transformers", "Plotly", "Matplotlib", "Seaborn", "WordCloud"
-    ],
-    githubUrl: "https://github.com/Suhaspr31/Sentiment-Watchdog-Project.git",
-    liveUrl: "",
-    color: "blue",
     textColor: "white",
     link: "#",
   },
@@ -265,7 +262,7 @@ export default function PortaviaReplica() {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [isSending, setIsSending] = useState(false);
   const [isSent, setIsSent] = useState(false);
-  
+
   // Project Modal State
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
@@ -343,8 +340,8 @@ export default function PortaviaReplica() {
         bgImageSrc="/img/water_falls.jpg"
         title="SUHAS P R"
         date={
-          <TypewriterEffect 
-            words={["Full Stack Developer", "AI/ML Engineer", "Software Engineer"]} 
+          <TypewriterEffect
+            words={["Full Stack Developer", "AI/ML Engineer", "Software Engineer"]}
           />
         }
         scrollToExpand="SCROLL DOWN TO EXPLORE"
@@ -508,12 +505,72 @@ export default function PortaviaReplica() {
           </div>
         </section>
 
+        {/* 2.5.6 Experience & Training Section */}
+        <section className="w-full relative py-20 bg-background" id="experience">
+          <div className="max-w-[1250px] mx-auto px-6">
+            <SpringReveal>
+              <div className="flex flex-col items-center lg:items-start mb-16 text-center lg:text-left">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-black/5 shadow-sm mb-6">
+                  <div className="w-2 h-2 rounded-full bg-[#5b68df] animate-pulse"></div>
+                  <span className="text-[13px] font-medium text-text-muted">Professional Track</span>
+                </div>
+                <h2 className="font-display text-[60px] md:text-[85px] font-black uppercase leading-[0.9] tracking-tighter text-text-main mb-6">
+                  Experience & <span className="text-accent">Training</span>
+                </h2>
+                <p className="font-body text-[18px] md:text-[20px] text-text-muted max-w-[700px]">
+                  Hands-on industry experience and comprehensive Java Full Stack training.
+                </p>
+              </div>
+            </SpringReveal>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+              {/* Experience Card */}
+              <SpringReveal delay={0.1}>
+                <div className="bg-[#f8f9fb] rounded-[32px] p-8 h-full flex flex-col border border-black/[0.03] hover:shadow-xl transition-all duration-500 group">
+                  <div className="mb-6 w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+                    <Briefcase className="text-accent w-6 h-6" />
+                  </div>
+                  <div className="flex-1">
+                    <span className="text-[12px] uppercase tracking-widest px-3 py-1 bg-accent/10 text-accent font-semibold rounded-full">Internship Experience</span>
+                    <h3 className="font-display font-bold text-[24px] mt-4 mb-1">MindMatrix</h3>
+                    <p className="text-[16px] font-semibold text-text-main">Android App Development Intern (Generative AI)</p>
+                    <p className="text-[13px] text-text-muted mt-1 mb-4">Feb 2026 – May 2026 • Remote</p>
+                    <p className="text-[15px] text-text-muted leading-relaxed font-body">
+                      Built and enhanced Android application modules using Kotlin, Android Studio, and Generative AI, integrating AI-powered features through prompt engineering to improve application functionality and user experience.
+                    </p>
+                  </div>
+                </div>
+              </SpringReveal>
+
+              {/* Training Card */}
+              <SpringReveal delay={0.2}>
+                <div className="bg-[#f8f9fb] rounded-[32px] p-8 h-full flex flex-col border border-black/[0.03] hover:shadow-xl transition-all duration-500 group">
+                  <div className="mb-6 w-12 h-12 rounded-2xl bg-white flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+                    <BookOpen className="text-accent w-6 h-6" />
+                  </div>
+                  <div className="flex-1">
+                    <span className="text-[12px] uppercase tracking-widest px-3 py-1 bg-accent/10 text-accent font-semibold rounded-full">Training</span>
+                    <h3 className="font-display font-bold text-[24px] mt-4 mb-1">Java Full Stack Development Training</h3>
+                    <p className="text-[16px] font-semibold text-text-main">Tata STRIVE</p>
+                    <p className="text-[13px] text-text-muted mt-1 mb-4">Apr 2026 – Aug 2026 • Centre – Nagavara, Bengaluru</p>
+                    <p className="text-[15px] text-text-muted leading-relaxed font-body">
+                      Completed industry-oriented Java Full Stack Development training by building web applications using Java, Spring Boot, React.js, HTML, CSS, Bootstrap, JavaScript, MySQL, and implementing RESTful APIs, CRUD operations, Git, and SDLC best practices through hands-on projects.
+                    </p>
+                  </div>
+                </div>
+              </SpringReveal>
+
+            </div>
+          </div>
+        </section>
+
         {/* 2.6 Stats Section */}
         <section className="max-w-[1250px] mx-auto px-6 py-20 z-10 relative">
           <SpringReveal>
             <div className="bg-white rounded-[28px] p-10 lg:p-20 shadow-sm border border-black/5 grid grid-cols-2 lg:grid-cols-4 gap-10 text-center relative overflow-hidden">
               <div>
-                <AnimatedStat target={3} suffix="+" />
+                <AnimatedStat target={5} suffix="+" />
                 <div className="font-body text-[15px] font-medium uppercase tracking-wide">AI Projects</div>
               </div>
               <div>
@@ -521,11 +578,11 @@ export default function PortaviaReplica() {
                 <div className="font-body text-[15px] font-medium uppercase tracking-wide">DSA Solved</div>
               </div>
               <div>
-                <AnimatedStat target={4} />
+                <AnimatedStat target={20} suffix="+" />
                 <div className="font-body text-[15px] font-medium uppercase tracking-wide">Certs</div>
               </div>
               <div>
-                <AnimatedStat target={7.95} />
+                <AnimatedStat target={8.12} />
                 <div className="font-body text-[15px] font-medium uppercase tracking-wide">CGPA</div>
               </div>
             </div>
@@ -556,12 +613,12 @@ export default function PortaviaReplica() {
               </div>
             </SpringReveal>
             <CardsParallax items={cardItems} onView={openModal} />
-            
+
             {/* Project Details Modal */}
-            <ProjectModal 
-              isOpen={isModalOpen} 
-              onClose={() => setIsModalOpen(false)} 
-              project={selectedProject} 
+            <ProjectModal
+              isOpen={isModalOpen}
+              onClose={() => setIsModalOpen(false)}
+              project={selectedProject}
             />
 
             <div className="flex justify-center mt-16">

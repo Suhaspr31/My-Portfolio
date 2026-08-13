@@ -31,6 +31,7 @@ export default function Navbar() {
   const navItems = [
     { title: 'Home', icon: <Home className='w-full h-full' />, href: '/#home' },
     { title: 'About', icon: <User className='w-full h-full' />, href: '/#about' },
+    { title: 'Experience', icon: <Briefcase className='w-full h-full' />, href: '/#experience' },
     { title: 'Skills', icon: <Zap className='w-full h-full' />, href: '/#skills' },
     { title: 'Projects', icon: <Briefcase className='w-full h-full' />, href: '/#featured-projects' },
     { title: 'Contact', icon: <Mail className='w-full h-full' />, href: '/#contact' },

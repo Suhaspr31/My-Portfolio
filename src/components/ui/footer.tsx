@@ -69,7 +69,7 @@ const footerData = {
     role: "Full Stack Developer | AI Enthusiast",
     desc: "Building scalable web apps & intelligent systems.",
   },
-  navigation: ["Home", "About", "Skills", "Projects", "Contact"],
+  navigation: ["Home", "About", "Experience", "Skills", "Projects", "Contact"],
   contact: {
     email: "suhasprs331@gmail.com ",
     location: "Karnataka, India",

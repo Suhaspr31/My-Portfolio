@@ -43,6 +43,38 @@ export default function Projects() {
 
     const images = [
         {
+            src: '/img/Smart Civic.png',
+            alt: 'Smart Civic Issue Reporting System',
+            tags: ['Java', 'Spring Boot', 'React.js', 'MySQL'],
+            overview: "Smart Civic Issue Reporting System (Jul 2026)\n\nBuilt a civic issue reporting platform supporting image uploads, real-time tracking, role-based access, notifications, and SLA-based escalation. Designed RESTful APIs, Spring Security-based role authentication, feedback management, and SLA-based escalation for efficient issue resolution.",
+            details: "This enterprise-grade civic management system empowers citizens to report civic grievances with geotagged image uploads and real-time status tracking. The backend, built with Java Spring Boot and MySQL, features SLA-based automated escalation workflows, real-time notification dispatch, role-based access control (Admin, Officer, Citizen), and comprehensive feedback loops.",
+            performance: "Real-time Tracking & Escalation",
+            performanceDetail: "SLA-based automated issue escalation workflows.",
+            responsive: "React.js Web Platform",
+            responsiveDetail: "Role-based access for citizens and admin officers.",
+            stack: [
+                "Java", "Spring Boot", "React.js", "MySQL", "Spring Security", "REST APIs"
+            ],
+            githubUrl: "https://github.com/Suhaspr31",
+            liveUrl: ""
+        },
+        {
+            src: '/img/Ecommerce.png',
+            alt: 'E-Commerce Web Application',
+            tags: ['Java', 'Spring Boot', 'Spring Security', 'MySQL'],
+            overview: "E-Commerce Web Application (Dec 2024)\n\nDeveloped a secure full-stack E-Commerce application supporting Admin and Customer modules with 15+ REST APIs, Spring Security authentication, and CRUD operations. Implemented shopping cart, checkout, and order management for both Admin and Customer modules.",
+            details: "Built with Java and Spring Boot, this application provides a robust backend architecture integrated with Spring Security for role-based authentication (Admin vs. Customer). Features include dynamic catalog management, secure checkout workflows, persistent cart management, and automated order processing built over MySQL with Hibernate JPA ORM.",
+            performance: "15+ RESTful APIs & Spring Security",
+            performanceDetail: "Spring Security authentication with Hibernate ORM.",
+            responsive: "Full-Stack Web App",
+            responsiveDetail: "Admin & Customer operational modules.",
+            stack: [
+                "Java", "Spring Boot", "Spring Security", "Hibernate", "MySQL", "REST APIs"
+            ],
+            githubUrl: "https://github.com/Suhaspr31",
+            liveUrl: ""
+        },
+        {
             src: '/img/AgroUnify.png',
             alt: 'AgroUnify',
             tags: ['Frontend', 'Backend', 'UI/UX'],
